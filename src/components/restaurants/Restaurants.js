@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
+import Restaurant from './Restaurant'
 
 class Restaurants extends Component {
+
+  showRests = () => {
+    return this.props.restaurants.map(function (rest) {
+      return <Restaurant key={rest.text} rest={rest}/>
+    })
+  }
   render() {
     return(
       <ul>
-        Restaurants Component
+        {this.showRests()}
       </ul>
     );
   }

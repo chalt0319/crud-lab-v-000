@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import ReviewsContainer from '../../containers/ReviewsContainer'
+import Restaurants from './Restaurants'
+import Review from '../reviews/Review'
 
 class Restaurant extends Component {
 
 
   render() {
-    const { restaurant } = this.props;
+    // const { restaurant } = this.props;
 
     return (
       <div>
         <li>
-          {restaurant.text}
-          <button> X </button>
-          <ReviewsContainer restaurant={restaurant}/>
+          <span>{this.props.rest.text} </span><button> X </button>
+          <ul>
+            <li><Review review={this.props.rest.review}/></li>
+          </ul>
         </li>
       </div>
     );
@@ -20,3 +23,5 @@ class Restaurant extends Component {
 };
 
 export default Restaurant;
+
+// <ReviewsContainer restaurant={restaurant}/>
