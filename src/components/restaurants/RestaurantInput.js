@@ -4,8 +4,7 @@ import ReviewInput from '../reviews/ReviewInput'
 class RestaurantInput extends Component {
 
   state = {
-    text: "",
-    review: ""
+    text: ""
   }
 
   handleChange = (e) => {
@@ -18,14 +17,7 @@ class RestaurantInput extends Component {
     e.preventDefault()
     this.props.addRest(this.state)
     this.setState({
-      text: "",
-      review: ""
-    })
-  }
-
-  handleReview = (review) => {
-    this.setState({
-      review: review
+      text: ""
     })
   }
 
@@ -35,7 +27,6 @@ class RestaurantInput extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>Add Restaurant: </label>
           <input onChange={this.handleChange} type="text" value={this.state.text}/>
-          <ReviewInput handleReview={this.handleReview} newValue={this.state.review}/>
           <input type="submit"/>
         </form>
       </div>

@@ -6,8 +6,9 @@ class Review extends Component {
     // const { review } = this.props
 
     return (
-      <span>{this.props.review} <button> X </button></span>
-
+      <li>
+        <span>{this.props.review.text} <button> X </button></span>
+      </li>
     );
   }
 
