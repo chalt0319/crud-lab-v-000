@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReviewInput from '../reviews/ReviewInput'
+// import ReviewInput from '../reviews/ReviewInput'
 
 class RestaurantInput extends Component {
 

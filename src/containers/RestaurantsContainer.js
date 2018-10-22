@@ -26,7 +26,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         addRest: (rest) => dispatch({ type: 'ADD_REST', rest}),
-        deleteRest: (rest) => dispatch({ type: 'DELETE_REST', rest})
+        deleteRest: (rest) => dispatch({ type: 'DELETE_REST', rest}),
     };
 };
 
